@@ -1,0 +1,28 @@
+version: '2.2'
+
+volumes:
+  data:
+  host_keys:
+  ssh_config_alice:
+  ssh_config_bob:
+
+services:
+  sshd:
+    build: .
+    image: docker.io/fphammerle/rsync-sshd
+    container_name: rsync_sshd
+    environment:
+      USERS: alice,bob
+    volumes:
+    - data:/data:rw
+    - host_keys:/etc/ssh/host_keys:rw
+    - ssh_config_alice:/home/alice/.ssh:ro
+    - ssh_config_bob:/home/bob/.ssh:ro
+    ports:
+    - '127.0.0.1:2222:22'
+    security_opt: [no-new-privileges]
+    # docker-compose >=2.2,<3
+    cpus: 0.4
+    mem_limit: 32M
+
+# https://docs.docker.com/compose/compose-file/compose-file-v2/
