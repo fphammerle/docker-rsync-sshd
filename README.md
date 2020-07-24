@@ -23,8 +23,8 @@ $ docker run --name rsync-sshd \
     --publish 2022:22 --env USERS=alice,bob \
     --volume accessible-data:/data:ro \
     --volume host-keys:/etc/ssh/host_keys \
-    --volume alice-ssh-config:/home/alice/.ssh:ro \ 
-    --volume bob-ssh-config:/home/bob/.ssh:ro \ 
+    --volume alice-ssh-config:/home/alice/.ssh:ro \
+    --volume bob-ssh-config:/home/bob/.ssh:ro \
     --init --rm \
     fphammerle/rsync-sshd
 $ rsync -av --rsh='ssh -p 2022' alice@localhost:/source /target

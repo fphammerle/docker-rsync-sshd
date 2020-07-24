@@ -1,6 +1,12 @@
-FROM alpine:3.8
+FROM alpine:3.12
 
-RUN apk add --no-cache rsync rrsync openssh-server
+ARG RSYNC_PACKAGE_VERSION=3.1.3-r3
+ARG RRSYNC_PACKAGE_VERSION=3.1.3-r3
+ARG OPENSSH_SERVER_PACKAGE_VERSION=8.3_p1-r0
+RUN apk add --no-cache \
+    openssh-server=$OPENSSH_SERVER_PACKAGE_VERSION \
+    rrsync=$RRSYNC_PACKAGE_VERSION \
+    rsync=$RSYNC_PACKAGE_VERSION
 
 ENV SSHD_HOST_KEYS_DIR /etc/ssh/host_keys
 VOLUME $SSHD_HOST_KEYS_DIR
