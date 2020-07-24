@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.0.0] - 2020-07-24
 ### Changed
 - upgrade base image from alpine v3.8 to v3.12
 
@@ -18,5 +18,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - client restricted to `rsync --server` command via `rrsync`
 - `rrsync` "chroots" to `/data`
 
-[Unreleased]: https://github.com/fphammerle/docker-rsync-sshd/compare/0.1-amd64...master
+[Unreleased]: https://github.com/fphammerle/docker-rsync-sshd/compare/v1.0.0...master
+[1.0.0]: https://github.com/fphammerle/docker-rsync-sshd/compare/0.1-amd64...v1.0.0
 [0.1.0]: https://github.com/fphammerle/docker-rsync-sshd/tree/0.1-amd64
