@@ -29,3 +29,9 @@ $ docker run --name rsync-sshd \
     fphammerle/rsync-sshd
 $ rsync -av --rsh='ssh -p 2022' alice@localhost:/source /target
 ```
+
+required capabilities:
+- NET_BIND_SERVICE
+- SETGID
+- SETUID
+- SYS_CHROOT
