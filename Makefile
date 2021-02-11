@@ -1,6 +1,6 @@
 # sync with https://github.com/fphammerle/docker-onion-service/blob/master/Makefile
 
-DOCKER_IMAGE_NAME := docker.io/fphammerle/rsync-ssh
+DOCKER_IMAGE_NAME := docker.io/fphammerle/rsync-sshd
 DOCKER_TAG_VERSION := $(shell git describe --match=v* --abbrev=0 --dirty | sed -e 's/^v//')
 OPENSSH_SERVER_PACKAGE_VERSION := $(shell grep -Po 'OPENSSH_SERVER_PACKAGE_VERSION=\K.+' Dockerfile | tr -d _-)
 RSYNC_PACKAGE_VERSION := $(shell grep -Po 'RSYNC_PACKAGE_VERSION=\K.+' Dockerfile | tr -d -)
