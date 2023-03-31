@@ -1,4 +1,4 @@
-FROM docker.io/alpine:3.17.2
+FROM docker.io/alpine:3.17.3
 
 ARG RSYNC_PACKAGE_VERSION=3.2.7-r0
 ARG OPENSSH_SERVER_PACKAGE_VERSION=9.1_p1-r2
