@@ -1,10 +1,10 @@
 FROM docker.io/alpine:3.19.0
 
-# https://git.alpinelinux.org/aports/log/main/rsync?h=3.18-stable
+# https://git.alpinelinux.org/aports/log/main/rsync?h=3.19-stable
 ARG RSYNC_PACKAGE_VERSION=3.2.7-r4
 # https://www.openssh.com/releasenotes.html
 # https://git.alpinelinux.org/aports/log/main/openssh?h=3.19-stable
-ARG OPENSSH_SERVER_PACKAGE_VERSION=9.5_p1-r0
+ARG OPENSSH_SERVER_PACKAGE_VERSION=9.6_p1-r0
 RUN apk add --no-cache \
     openssh-server=$OPENSSH_SERVER_PACKAGE_VERSION \
     rrsync=$RSYNC_PACKAGE_VERSION \
