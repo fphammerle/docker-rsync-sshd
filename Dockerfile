@@ -1,4 +1,4 @@
-FROM docker.io/alpine:3.19.0
+FROM docker.io/alpine:3.19.1
 
 # https://git.alpinelinux.org/aports/log/main/rsync?h=3.19-stable
 ARG RSYNC_PACKAGE_VERSION=3.2.7-r4
